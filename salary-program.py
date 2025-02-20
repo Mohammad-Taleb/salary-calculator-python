@@ -42,6 +42,9 @@ def monthly_electricity():
 months = ['january', 'february', 'march', 'april', 'may',
           'june', 'july', 'august', 'september', 'october', 'november', 'december']
 
+total_expenses = 0
+total_savings = 0
+yearly_expenses = 0
 
 salary = float(input("Enter your salary in $: "))
 month_name = input("Enter the name of the month: ").lower()
