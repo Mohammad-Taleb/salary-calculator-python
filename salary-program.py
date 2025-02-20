@@ -80,4 +80,5 @@ else:
         elif user_choice == '3':
             pay_electricity = float(input("Enter a percentage to pay your bill: "))
             total_expenses += monthly_electricity
-        
+        elif user_choice == '4':
+            print(f"Your total savings for {month_name} is ${total_savings:.2f}")
