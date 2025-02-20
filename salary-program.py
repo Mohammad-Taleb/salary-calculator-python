@@ -1,18 +1,28 @@
 def deposit_saving():
-  amount_deposited = 0
-  if deposit < 0:
-      print("Deposited amount must be greater than zero")
-      return 0
-  elif deposit > salary:
-      print("Insufficient funds")
-      return 0
-  else:
-      amount_deposited += (deposit * salary)/100
-  return amount_deposited
+    amount_deposited = 0
+    if deposit < 0:
+        print("Deposited amount must be greater than zero")
+        return 0
+    elif deposit > salary:
+        print("Insufficient funds")
+        return 0
+    else:
+        amount_deposited += (deposit * salary)/100
+    return amount_deposited
 
 
 def monthly_rent():
-  pass
+    total_rent = 0
+    if pay_rent < 0:
+        print("Payment must be greater be than zero")
+        return 0
+    elif pay_rent > salary:
+        print("Insufficient funds")
+        return 0
+    else:
+        total_rent += (pay_rent * salary)/100
+    return total_rent
+
 
 
 def monthly_electricity():
