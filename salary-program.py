@@ -26,16 +26,16 @@ def monthly_rent():
 
 
 def monthly_electricity():
-    total_rent = 0
-    if pay_rent < 0:
-        print("Payment must be greater be than zero")
+    total_electricity = 0
+    if pay_electricity < 0:
+        print("Payment must be greater than zero")
         return 0
-    elif pay_rent > salary:
+    elif pay_electricity > salary:
         print("Insufficient funds")
         return 0
     else:
-        total_rent += (pay_rent * salary)/100
-    return total_rent
+        total_electricity += (pay_electricity * salary)/100
+    return total_electricity
 
 
 
@@ -79,7 +79,7 @@ else:
             total_expenses += monthly_rent()
         elif user_choice == '3':
             pay_electricity = float(input("Enter a percentage to pay your bill: "))
-            total_expenses += monthly_electricity
+            total_expenses += monthly_electricity()
         elif user_choice == '4':
             print(f"Your total savings for {month_name} is ${total_savings:.2f}")
         elif user_choice == '5':
