@@ -26,7 +26,17 @@ def monthly_rent():
 
 
 def monthly_electricity():
-  pass
+    total_rent = 0
+    if pay_rent < 0:
+        print("Payment must be greater be than zero")
+        return 0
+    elif pay_rent > salary:
+        print("Insufficient funds")
+        return 0
+    else:
+        total_rent += (pay_rent * salary)/100
+    return total_rent
+
 
 
 months = ['january', 'february', 'march', 'april', 'may',
