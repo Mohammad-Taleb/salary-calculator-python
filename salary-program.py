@@ -88,3 +88,7 @@ else:
           print(f"Your yearly estimation is ${yearly_expenses + (monthly_rent() + monthly_electricity())*12:.2f}")
         elif user_choice == '7':
             print(f"Your total expenses for {month_name} is ${total_expenses:.2f}") 
+        elif user_choice == '0':
+            print()
+            print("HAVE A NICE DAY <3")
+            break
