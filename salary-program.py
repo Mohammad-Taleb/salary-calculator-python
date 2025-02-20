@@ -92,3 +92,8 @@ else:
             print()
             print("HAVE A NICE DAY <3")
             break
+        else:
+            print()
+            print("Enter a valid choice")
+            print()
+        continue
