@@ -16,3 +16,10 @@ months = ['january', 'february', 'march', 'april', 'may',
 
 salary = float(input("Enter your salary in $: "))
 month_name = input("Enter the name of the month: ").lower()
+
+if salary <= 0:
+    print("Enter a valid salary")
+elif month_name not in months:
+    print("Enter a valid month name")
+else:
+   while True:
