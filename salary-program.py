@@ -41,3 +41,8 @@ else:
 
         if user_choice == '1':
             deposit = float(input("Enter a percentage to add to your savings: "))
+        elif user_choice == '2':
+            pay_rent = float(input("Enter a percentage to pay your rent: "))
+        elif user_choice == '3':
+            pay_electricity = float(input("Enter a percentage to pay your bill: "))
+        
