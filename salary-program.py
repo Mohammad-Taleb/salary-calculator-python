@@ -84,3 +84,6 @@ else:
             print(f"Your total savings for {month_name} is ${total_savings:.2f}")
         elif user_choice == '5':
           print(f"Your remaining salary for {month_name} is ${(salary - total_expenses) - total_savings:.2f}")
+        elif user_choice == '6':
+          print(f"Your yearly estimation is ${yearly_expenses + (monthly_rent() + monthly_electricity())*12:.2f}")
+          
