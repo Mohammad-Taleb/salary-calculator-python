@@ -73,8 +73,11 @@ else:
 
         if user_choice == '1':
             deposit = float(input("Enter a percentage to add to your savings: "))
+            total_savings += deposit_saving()
         elif user_choice == '2':
             pay_rent = float(input("Enter a percentage to pay your rent: "))
+            total_expenses += monthly_rent()
         elif user_choice == '3':
             pay_electricity = float(input("Enter a percentage to pay your bill: "))
+            total_expenses += monthly_electricity
         
