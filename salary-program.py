@@ -82,3 +82,5 @@ else:
             total_expenses += monthly_electricity
         elif user_choice == '4':
             print(f"Your total savings for {month_name} is ${total_savings:.2f}")
+        elif user_choice == '5':
+          print(f"Your remaining salary for {month_name} is ${(salary - total_expenses) - total_savings:.2f}")
