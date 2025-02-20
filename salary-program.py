@@ -36,3 +36,8 @@ else:
         print("0- TO STOP THE PROGRAM")
         print("*********************************************************************")
         print()
+
+        user_choice = input("Enter a number: ")
+
+        if user_choice == '1':
+            deposit = float(input("Enter a percentage to add to your savings: "))
