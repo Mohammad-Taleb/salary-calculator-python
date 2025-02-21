@@ -45,6 +45,7 @@ months = ['january', 'february', 'march', 'april', 'may',
 total_expenses = 0
 total_savings = 0
 yearly_expenses = 0
+spendings = 0
 
 salary = float(input("Enter your salary in $: "))
 month_name = input("Enter the name of the month: ").lower()
@@ -74,16 +75,24 @@ else:
         if user_choice == '1':
             deposit = float(input("Enter a percentage to add to your savings: "))
             total_savings += deposit_saving()
+            spendings += total_savings
+
         elif user_choice == '2':
             pay_rent = float(input("Enter a percentage to pay your rent: "))
             total_expenses += monthly_rent()
+            spendings += total_expenses
+
         elif user_choice == '3':
             pay_electricity = float(input("Enter a percentage to pay your bill: "))
             total_expenses += monthly_electricity()
+            spendings += total_expenses
+
         elif user_choice == '4':
             print(f"Your total savings for {month_name} is ${total_savings:.2f}")
+            
         elif user_choice == '5':
-          print(f"Your remaining salary for {month_name} is ${(salary - total_expenses) - total_savings:.2f}")
+          remainder = (salary) - spendings
+          print(f"Your remaining salary for {month_name} is ${remainder:.2f}")
         elif user_choice == '6':
           print(f"Your yearly estimation is ${yearly_expenses + (monthly_rent() + monthly_electricity())*12:.2f}")
         elif user_choice == '7':
