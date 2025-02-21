@@ -112,6 +112,4 @@ else:
         else:
             print()
             print("Enter a valid choice")
-            print(f"Your salary would look like this {salary**2:.2f}")
-            print("if you worked TWO times harder 😉")
         continue
