@@ -3,7 +3,7 @@ def deposit_saving():
     if deposit < 0:
         print("Deposited amount must be greater than zero")
         return 0
-    elif deposit > salary:
+    elif spendings > salary or deposit > 100:
         print("Insufficient funds")
         return 0
     else:
@@ -16,7 +16,7 @@ def monthly_rent():
     if pay_rent < 0:
         print("Payment must be greater be than zero")
         return 0
-    elif pay_rent > salary:
+    elif spendings > salary or pay_rent > 100:
         print("Insufficient funds")
         return 0
     else:
@@ -30,7 +30,7 @@ def monthly_electricity():
     if pay_electricity < 0:
         print("Payment must be greater than zero")
         return 0
-    elif pay_electricity > salary:
+    elif spendings > salary or pay_electricity > 100:
         print("Insufficient funds")
         return 0
     else:
@@ -89,14 +89,20 @@ else:
 
         elif user_choice == '4':
             print(f"Your total savings for {month_name} is ${total_savings:.2f}")
-            
+
         elif user_choice == '5':
-          remainder = (salary) - spendings
-          print(f"Your remaining salary for {month_name} is ${remainder:.2f}")
+            remainder = (salary) - spendings
+            if remainder <= 0:
+                print("SALARY IS GONE")
+            else:
+             print(f"Your remaining salary for {month_name} is ${remainder:.2f}")
+
         elif user_choice == '6':
           print(f"Your yearly estimation is ${yearly_expenses + (monthly_rent() + monthly_electricity())*12:.2f}")
+
         elif user_choice == '7':
             print(f"Your total expenses for {month_name} is ${total_expenses:.2f}") 
+
         elif user_choice == '0':
             print()
             print("HAVE A NICE DAY <3")
